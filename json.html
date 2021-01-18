@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    
+    <h3>List of Names</h3>
+    <script>
+        // var emp={
+        //     name:"gunapal",
+        //     id:101,
+        //     salary:5500.12,
+        //     dept: "SE",
+        //     DOJ: "02/12/2019",
+        //     address:{
+        //         streetNo:"2nd cross",
+        //         Area: "KR moholla",
+        //         City:"Mysore",
+        //         state:"Karnataka"
+        //     }
+        // }
+        
+        // // console.log(emp);   
+        // var emp1 = JSON.stringify(emp);
+        // // console.log(emp1);
+        // // console.log(JSON.parse(emp1));
+
+        // localStorage.setItem(101, emp1);
+        // console.log("From local Storage:  ", JSON.parse(localStorage.getItem(101)));
+
+            var arr=["jack", "mike", "roberto", "james"]
+            
+          var nw= document.createElement("ul");
+       
+        arr.forEach(data =>{
+            var z= document.createElement('li');
+                z.textContent = data;
+                nw.appendChild(z);
+            })
+            document.body.appendChild(nw);
+
+
+//             function myFunction(value) {
+//              txt = txt + value + "<br>"; 
+//               }
+//               for (const key in arr) {
+//               console.log(key);
+//               newone.innerText='key'
+//             }
+
+        </script>
+
+
+</body>
+</html>
