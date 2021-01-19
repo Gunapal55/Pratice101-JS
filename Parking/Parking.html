@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="/parking.png" alt="Parking image" width="62" height="54" class="d-inline-block align-center ">
+        PMS </a>
+          </div>
+  </nav>
+  <div class="container">
+      <form action="" name="myForm" onsubmit="return validateMyFrom()">
+     <br>
+     <h3 style="align-items: center;">Add your details</h3>
+    <div class="row mb-3">
+        <div class="col-sm-12">
+        <label for="ownerName" class="col-sm-2 col-form-label">Owner Name</label>
+       <input type="text" class="form-control" id="ownerName" required placeholder="Enter Owner's Full Name">
+        </div> 
+        <div class="col-sm-12">
+        <label for="numPlate" class="col-sm-2 col-form-label">License  Plate Number</label>
+        <input type="text" class="form-control" id="numPlate" required placeholder="IND-tt-NN-tt-NNNN" >
+        <small style="color: red;" id="errorNum"></small>
+        </div>
+       <p></p>
+        <div class="col-sm-12 mb-1">        
+            <label for="from">Parking Date</label>
+          <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">From</span>
+    <input type="date" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+   
+  </div>
+            
+            <div class="input-group mb-3">
+       <span class="input-group-text" id="inputGroup-sizing-default">Till</span>
+              <input type="date" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        </div>
+        <p></p>
+        <input type="submit" value="submit" class="col-sm-12 btn btn-dark btn-lg" onclick="validateMyForm()" id="submit">
+    </form>
+  
+<div class="col-sm-12 mt-5 ">
+    <label for="basic-url" class="form-label ">Seach Vehicle</label>
+<div class="input-group mb-3 col-sm-12">
+  <span class="input-group-text" id="basic-addon3">Owner Name</span>
+  <input type="text" class="form-control" placeholder="Enter Owner's name" id="basic-url" aria-describedby="basic-addon3">
+<hr>
+</div>
+</div>
+<div class ="container mt-5">
+    <table class="table  table-bordered table-hover"> 
+        <thead class="thead-dark">
+            <tr>
+                <th>SI NO</th>
+                <th>Owner Name</th>
+                <th>License  Plate Number</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Remove</th>
+            </tr>
+        </thead>  
+        <tbody id="t-body">
+    </tbody>
+</table>
+</div>
+
+<script src="parking.js"></script>
+</body>
+</html>
