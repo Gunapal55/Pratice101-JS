@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function addBrand(...) {
+            let brand ="Puma";
+            return brand;
+        }
+        console.log(`This is from addBrand ${addBrand()}`);
+    </script>
+    <script>
+        let arr=[10,20,30,40]
+        console.log(arr);
+        let arr2 = [...arr,50,60,70]
+        console.log(arr2);
+    </script> -->
+    <!-- <script>
+        
+        function test(...ip) {
+            console.log(Array.isArray(ip));
+            console.log(typeof(ip));
+            let sum=0;
+            ip.forEach(num =>{
+                sum+=num;
+            })
+            console.log(sum);
+        }
+        test(20,12,11);
+
+    </script> -->
+<!-- Array Destrcuting -->
+<!-- <script>
+    var arr=[1,2,3,4,5];
+    var[a,,c,d,e]=arr;
+        console.log(a);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+   
+    var num =[10,20,,40,50]
+    var[aa=55,bb,cc=0,dd,ee]=num;
+
+    //----------object destr---------
+    let emp={
+        name:'gp',
+        age:23,
+        skill:()=>{
+            console.log('coding...');
+        }
+    }
+    // let{name:full_Name,age,skill:coder} = emp;
+
+    let{name:full_name,...skill}=emp;
+
+
+</script> -->
+<!-- Promises -->
+<!-- <script>
+
+ var myPromis = new Promise((reslove, reject)=>{
+     if(false){
+        reslove("Promis is Fulilled.."); 
+        }else{
+            reject("Promis is rejected...")
+     }
+ })
+ console.log(myPromis);
+myPromis.then((data)=>{
+    console.log(data);
+}).catch((err)=>{
+    console.log(err);
+})
+
+</script> -->
+    <!-- Asych and Await -->
+<!-- <script>
+
+    function getPromis() {
+        return new Promise((reslove, reject)=>{
+            setTimeout(()=>{
+                reslove("success")
+            },2000);
+        });
+    }
+
+    async function getData(){
+        console.log("Started");
+        await getPromis().then((resp)=>{
+            console.log(resp);
+        });
+        console.log("Ended");
+    }
+getData();
+</script> -->
+<!-- Class -->
+<script>
+    class Vehicle{
+        constructor(engine){
+            this.engine=engine;
+        }
+            set setEngine(engine){
+                this.engine=engine;
+        }
+                                   
+        get getEngine(){
+            return this.engine;
+        }
+
+    }
+    
+    class Bike{
+        constructor(engine, color, cost){
+           this.color =color
+            this.cost=cost
+        }
+        static wheels ="2wheels";
+
+        static start(){
+            console.log("Started");
+        }
+        park(){
+            console.log("Parked");
+        }
+        set setEngine(engine){
+                this.engine=engine;
+        }
+                                   
+        get getEngine(){
+            return this.engine;
+        }
+    }
+        class Model extends Bike{
+
+            constructor(engine, color, model){
+                super(engine, company)
+                    this.model=model;
+                
+            }
+
+            set setModel(model){
+                this.model =model;
+            }
+
+            get getModel(){
+                return this.model;
+            }
+
+    }
+
+        var myBike = new model( "1000cc","Red","120000");
+
+    
+</script>
+<script src="EsSix.js"></script>
+</body>
+</html> 
