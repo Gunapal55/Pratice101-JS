@@ -42,8 +42,6 @@ form.addEventListener('submit',(e)=>{
   if(msg.length>0){
     e.preventDefault();
   }
-
-
 })
 
 
@@ -62,13 +60,12 @@ function getVehicle(){
 function onSub(){
   
   let newForm =document.myForm;
- console.log(newForm.ownerName.value);
+
   var vehicle={
     name :newForm.ownerName.value,
     numPlate: newForm.numbPlate.value,  
     from: newForm.start.value,
     to: newForm.end.value
-  
   }
   
   console.log(vehicle);
@@ -102,12 +99,36 @@ function onSub(){
   }
     
   function searchRes(){
-   let ip= document.getElementById('search').value;
-    listData =getVehicle();
-    let res=listData.indexOf(ip.toLowerCase());
-    console.log(res);
-    displayVehicle();
-  }
+
+          document.querySelector('#search').addEventListener('keyup', function searchTable(){
+            //Get value of the input search
+            const searchValue = document.querySelector('#search').value.toUpperCase();
+            //Get all lines of table body
+            const tableLine = (document.querySelector('#t-body')).querySelectorAll('tr');
+            //for loop #1 (used to pass all the lines)
+            for(let i = 0; i < tableLine.length; i++){
+                var count = 0;
+                //Get all collumns of each line
+                const lineValues = tableLine[i].querySelectorAll('td');
+                //for loop #2 (used to pass all the collumns)
+                for(let j = 0; j < lineValues.length - 1; j++){
+                    //Check if any collumn of the line starts with the input search string
+                    if((lineValues[j].innerHTML.toUpperCase()).startsWith(searchValue)){
+                        count++;
+                    }
+                }
+                if(count > 0){
+                    //If any collumn contains the search value the display block
+                    tableLine[i].style.display = '';
+                }else{
+                    //Else display none 
+                    tableLine[i].style.display = 'none';
+                }
+                    }        
+      }
+
+  
+          )}
 
   function vehDelete(){
       alert("Selected Record will be deleted")
@@ -127,5 +148,5 @@ function onSub(){
 
 
 
-
+    
 

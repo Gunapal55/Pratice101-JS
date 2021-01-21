@@ -1,0 +1,18 @@
+.img1{
+    display: flex;
+    height: 60%;
+    width: auto;
+
+}
+.logo{
+    height: 45px;
+}
+#searching{
+   align-content: center;
+    display: flex;
+    width: 60%;
+}
+.slides{
+height: 40px;
+width:auto
+}
