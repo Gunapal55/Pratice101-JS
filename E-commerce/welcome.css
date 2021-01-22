@@ -1,0 +1,44 @@
+.img1{
+    display: flex;
+    height: 60%;
+    width: auto;
+
+}
+.logo{
+    height: 45px;
+}
+.serBar{
+    display: flex;
+    width: 60%;
+    margin-right: 30%;
+    border: black;
+    height: 34px;
+    
+}
+#bar{
+    display: flex;
+    width: 60%;
+    margin-right: 30%;
+    border: black;
+    border-radius: 10px;
+    margin-left: 20px;
+  
+}
+#sbtn{
+    border: black;
+    border-color: whitesmoke;
+    color: whitesmoke;
+    margin: 0;
+    border-radius: 14px;
+}
+.foot{
+    background-color: black;
+    display: flex;
+    max-width: 100%;
+    color: white;
+}
+.userI{
+    height: 30px;
+    
+}
+
